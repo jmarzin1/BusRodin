@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="imini ≔ 1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="imaxi ≔ 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="array"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="imini"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="imaxi"/>
+<org.eventb.core.invariant name="+" org.eventb.core.label="inv1" org.eventb.core.predicate="imini ∈ ℕ1"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv2" org.eventb.core.predicate="imaxi ∈ ℕ1"/>
+<org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="calcul">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="rmin"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="rmax"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="rmin ∈ 1‥length"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="rmax ∈ 1‥length"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="imini ≔ rmin" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="imaxi ≔ rmax" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="∀i·i∈1‥length ⇒ array(i) ≥ array(rmin)"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="∀i·i∈1‥length ⇒ array(i) ≤ array(rmax)"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>
