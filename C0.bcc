@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
-<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="array∈1 ‥ length → ℤ" org.eventb.core.source="/Minimax/array.buc|org.eventb.core.contextFile#array|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
-<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="length∈ℕ1" org.eventb.core.source="/Minimax/array.buc|org.eventb.core.contextFile#array|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
-<org.eventb.core.scConstant name="array" org.eventb.core.source="/Minimax/array.buc|org.eventb.core.contextFile#array|org.eventb.core.constant#'" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
-<org.eventb.core.scConstant name="length" org.eventb.core.source="/Minimax/array.buc|org.eventb.core.contextFile#array|org.eventb.core.constant#(" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="Maxi∈ℕ1" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="Maxi" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scCarrierSet name="Usagers" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(Usagers)"/>
 </org.eventb.core.scContextFile>
