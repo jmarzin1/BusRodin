@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="EtatEnum" org.eventb.core.type="ℙ(EtatEnum)"/>
+<org.eventb.core.poIdentifier name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.poIdentifier name="Arrivee" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.poIdentifier name="Depart" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.poIdentifier name="Descente" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.poIdentifier name="Maxi" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Montee" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.poPredicate name="EtatEnun" org.eventb.core.predicate="Maxi∈ℕ1" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="EtatEnuo" org.eventb.core.predicate="finite(Usagers)" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="EtatEnup" org.eventb.core.predicate="partition(EtatEnum,{Arrivee},{Descente},{Montee},{Depart})" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/BusRodin/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="Etat" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.poIdentifier name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.poIdentifier name="passagersDescendant" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.poIdentifier name="passagersEnAttente" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.poPredicate name="passagersDescendanu" org.eventb.core.predicate="passagers⊆Usagers" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poPredicate name="passagersDescendanv" org.eventb.core.predicate="card(passagers)≤Maxi" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="passagersDescendanw" org.eventb.core.predicate="passagersEnAttente⊆Usagers" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#1"/>
+<org.eventb.core.poPredicate name="passagersDescendanx" org.eventb.core.predicate="passagers∩passagersEnAttente=(∅ ⦂ ℙ(Usagers))" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#2"/>
+<org.eventb.core.poPredicate name="passagersDescendany" org.eventb.core.predicate="Etat∈EtatEnum" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#4"/>
+<org.eventb.core.poPredicate name="passagersDescendanz" org.eventb.core.predicate="passagersDescendant⊆passagers" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#8"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/act1/SIM" org.eventb.core.accurate="false" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BusRodin/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPpassagersDescendanu">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="⊤" org.eventb.core.source="/BusRodin/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
+<org.eventb.core.poPredicate name="(" org.eventb.core.predicate="⊤" org.eventb.core.source="/BusRodin/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
+<org.eventb.core.poPredicate name=")" org.eventb.core.predicate="⊤" org.eventb.core.source="/BusRodin/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="passagers'⊆Usagers∧passagersEnAttente'⊆Usagers∧card(passagers')≤Maxi∧passagers'∩passagersEnAttente'=(∅ ⦂ ℙ(Usagers))∧passagersDescendant'⊆passagers'" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'|org.eventb.core.action#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'|org.eventb.core.action#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/BusRodin/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/BusRodin/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/BusRodin/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpassagersDescendanu" org.eventb.core.parentSet="/BusRodin/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Etat'" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.poIdentifier name="passagersDescendant'" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.poIdentifier name="passagersEnAttente'" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.poIdentifier name="passagers'" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpassagersDescendanu" org.eventb.core.parentSet="/BusRodin/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTpassagersDescendanu" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/BusRodin/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2"/>
+</org.eventb.core.poFile>

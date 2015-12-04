@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scRefinesMachine name="'" org.eventb.core.scTarget="/BusRodin/M0.bcm" org.eventb.core.source="/BusRodin/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.refinesMachine#)"/>
+<org.eventb.core.scSeesContext name="(" org.eventb.core.scTarget="/BusRodin/C1.bcc" org.eventb.core.source="/BusRodin/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.seesContext#("/>
+<org.eventb.core.scInternalContext name="C0">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="Maxi∈ℕ1" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="finite(Usagers)" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="partition(EtatEnum,{Arrivee},{Descente},{Montee},{Depart})" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#0" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="Arrivee" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#," org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.scConstant name="Depart" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#\/" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.scConstant name="Descente" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#-" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.scCarrierSet name="EtatEnum" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.carrierSet#+" org.eventb.core.type="ℙ(EtatEnum)"/>
+<org.eventb.core.scConstant name="Maxi" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scConstant name="Montee" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#." org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.scCarrierSet name="Usagers" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInternalContext name="C1">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/BusRodin/C0.bcc|org.eventb.core.scContextFile#C0" org.eventb.core.source="/BusRodin/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.extendsContext#'"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInvariant name="C1" org.eventb.core.label="inv1" org.eventb.core.predicate="passagers⊆Usagers" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#\/" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="C2" org.eventb.core.label="inv2" org.eventb.core.predicate="card(passagers)≤Maxi" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#0" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="C3" org.eventb.core.label="inv3" org.eventb.core.predicate="passagersEnAttente⊆Usagers" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#1" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="C4" org.eventb.core.label="inv4" org.eventb.core.predicate="passagers∩passagersEnAttente=(∅ ⦂ ℙ(Usagers))" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#2" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="C5" org.eventb.core.label="inv5" org.eventb.core.predicate="Etat∈EtatEnum" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#4" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="C6" org.eventb.core.label="inv6" org.eventb.core.predicate="passagersDescendant⊆passagers" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#8" org.eventb.core.theorem="false"/>
+<org.eventb.core.scVariable name="Etat" org.eventb.core.abstract="true" org.eventb.core.concrete="false" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.variable#3" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.scVariable name="passagers" org.eventb.core.abstract="true" org.eventb.core.concrete="false" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.variable#-" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.scVariable name="passagersDescendant" org.eventb.core.abstract="true" org.eventb.core.concrete="false" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.variable#7" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.scVariable name="passagersEnAttente" org.eventb.core.abstract="true" org.eventb.core.concrete="false" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.variable#." org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.scEvent name="passagersDescendanu" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/BusRodin/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'">
+<org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/BusRodin/M0.bcm|org.eventb.core.scMachineFile#M0|org.eventb.core.scEvent#passagersDescendanu" org.eventb.core.source="/BusRodin/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
+<org.eventb.core.scWitness name="(" org.eventb.core.label="Etat'" org.eventb.core.predicate="⊤" org.eventb.core.source="/BusRodin/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
+<org.eventb.core.scWitness name=")" org.eventb.core.label="passagersEnAttente'" org.eventb.core.predicate="⊤" org.eventb.core.source="/BusRodin/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
+<org.eventb.core.scWitness name="*" org.eventb.core.label="passagersDescendant'" org.eventb.core.predicate="⊤" org.eventb.core.source="/BusRodin/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
+<org.eventb.core.scWitness name="+" org.eventb.core.label="passagers'" org.eventb.core.predicate="⊤" org.eventb.core.source="/BusRodin/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="INITIALISATION/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Usagers">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(EtatEnum,{Arrivee},{Descente},{Montee},{Depart}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3,p4,p5,p6,p7,p8"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3,p4,p5,p6,p7,p8"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p12">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15"/>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p16"/>
+<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p17"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="Maxi" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passagers'" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="passagersDescendant'" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="passagersEnAttente'" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="finite(passagers')"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬Arrivee=Depart">
+<org.eventb.core.prIdent name="Arrivee" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.prIdent name="Depart" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.prIdent name="EtatEnum" org.eventb.core.type="ℙ(EtatEnum)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬Arrivee=Descente">
+<org.eventb.core.prIdent name="Arrivee" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.prIdent name="Descente" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.prIdent name="EtatEnum" org.eventb.core.type="ℙ(EtatEnum)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="passagers'⊆Usagers∧passagersEnAttente'⊆Usagers⇒finite(passagers')"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="passagers'⊆Usagers∧passagersEnAttente'⊆Usagers∧card(passagers')≤Maxi∧passagers'∩passagersEnAttente'=(∅ ⦂ ℙ(Usagers))∧passagersDescendant'⊆passagers'"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="passagersDescendant'⊆passagers'"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬Arrivee=Montee">
+<org.eventb.core.prIdent name="Arrivee" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.prIdent name="EtatEnum" org.eventb.core.type="ℙ(EtatEnum)"/>
+<org.eventb.core.prIdent name="Montee" org.eventb.core.type="EtatEnum"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(EtatEnum,{Arrivee},{Descente},{Montee},{Depart})">
+<org.eventb.core.prIdent name="Arrivee" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.prIdent name="Depart" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.prIdent name="Descente" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.prIdent name="EtatEnum" org.eventb.core.type="ℙ(EtatEnum)"/>
+<org.eventb.core.prIdent name="Montee" org.eventb.core.type="EtatEnum"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬Montee=Depart">
+<org.eventb.core.prIdent name="Depart" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.prIdent name="EtatEnum" org.eventb.core.type="ℙ(EtatEnum)"/>
+<org.eventb.core.prIdent name="Montee" org.eventb.core.type="EtatEnum"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="EtatEnum={Arrivee,Descente,Montee,Depart}">
+<org.eventb.core.prIdent name="Arrivee" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.prIdent name="Depart" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.prIdent name="Descente" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.prIdent name="EtatEnum" org.eventb.core.type="ℙ(EtatEnum)"/>
+<org.eventb.core.prIdent name="Montee" org.eventb.core.type="EtatEnum"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬Descente=Depart">
+<org.eventb.core.prIdent name="Depart" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.prIdent name="Descente" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.prIdent name="EtatEnum" org.eventb.core.type="ℙ(EtatEnum)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="card(passagers')≤Maxi∧passagers'∩passagersEnAttente'=(∅ ⦂ ℙ(Usagers))∧passagersDescendant'⊆passagers'"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬Descente=Montee">
+<org.eventb.core.prIdent name="Descente" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.prIdent name="EtatEnum" org.eventb.core.type="ℙ(EtatEnum)"/>
+<org.eventb.core.prIdent name="Montee" org.eventb.core.type="EtatEnum"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="⊤∧⊤⇒finite(passagers')"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="⊤∧⊤∧card(passagers')≤Maxi∧passagers'∩passagersEnAttente'=(∅ ⦂ ℙ(Usagers))∧passagersDescendant'⊆passagers'"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="passagers'∩passagersEnAttente'=(∅ ⦂ ℙ(Usagers))"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="card(passagers')≤Maxi"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

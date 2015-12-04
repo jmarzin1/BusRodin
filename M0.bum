@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.machineFile org.eventb.core.comment=" -&gt; contraintes 2 et 3 " org.eventb.core.configuration="org.eventb.core.fwd" version="5">
 <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
 <org.eventb.core.action name="'" org.eventb.core.assignment="passagers, passagersEnAttente, passagersDescendant :∣ passagers' ⊆ Usagers ∧ passagersEnAttente' ⊆ Usagers ∧ card(passagers') ≤ Maxi ∧ passagers' ∩ passagersEnAttente' = ∅ ∧ passagersDescendant' ⊆ passagers'" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="Etat :∣ Etat' ∈ EtatEnum" org.eventb.core.label="act2"/>
@@ -30,6 +30,7 @@
 <org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Depart">
 <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="Etat = Montee"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="Etat ≔ Depart" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="(card(passagersEnAttente) = 0) ∨ (card(passagers) = Maxi)"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="7" org.eventb.core.identifier="passagersDescendant"/>
 <org.eventb.core.invariant name="8" org.eventb.core.label="inv6" org.eventb.core.predicate="passagersDescendant ⊆ passagers"/>

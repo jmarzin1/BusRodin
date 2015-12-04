@@ -9,4 +9,5 @@
 <org.eventb.core.psStatus name="INITIALISATION/act2/FIS" org.eventb.core.confidence="1000" org.eventb.core.poStamp="34" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="Arret/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="Montee/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="36" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Depart/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
