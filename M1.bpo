@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poFile org.eventb.core.poStamp="5">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="EtatEnum" org.eventb.core.type="ℙ(EtatEnum)"/>
 <org.eventb.core.poIdentifier name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
@@ -12,7 +12,7 @@
 <org.eventb.core.poPredicate name="EtatEnuo" org.eventb.core.predicate="finite(Usagers)" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#*"/>
 <org.eventb.core.poPredicate name="EtatEnup" org.eventb.core.predicate="partition(EtatEnum,{Arrivee},{Descente},{Montee},{Depart})" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#0"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/BusRodin/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/BusRodin/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="5">
 <org.eventb.core.poIdentifier name="Etat" org.eventb.core.type="EtatEnum"/>
 <org.eventb.core.poIdentifier name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.poIdentifier name="passagersDescendant" org.eventb.core.type="ℙ(Usagers)"/>
@@ -23,6 +23,9 @@
 <org.eventb.core.poPredicate name="passagersDescendanx" org.eventb.core.predicate="passagers∩passagersEnAttente=(∅ ⦂ ℙ(Usagers))" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#2"/>
 <org.eventb.core.poPredicate name="passagersDescendany" org.eventb.core.predicate="Etat∈EtatEnum" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#4"/>
 <org.eventb.core.poPredicate name="passagersDescendanz" org.eventb.core.predicate="passagersDescendant⊆passagers" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#8"/>
+<org.eventb.core.poPredicate name="passagersDescendan{" org.eventb.core.predicate="finite(passagersEnAttente)" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#9"/>
+<org.eventb.core.poPredicate name="passagersDescendan|" org.eventb.core.predicate="finite(passagers)" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#:"/>
+<org.eventb.core.poPredicate name="passagersDescendan}" org.eventb.core.predicate="finite(passagersDescendant)" org.eventb.core.source="/BusRodin/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#;"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poSequent name="INITIALISATION/act1/SIM" org.eventb.core.accurate="false" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="2">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BusRodin/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPpassagersDescendanu">
@@ -43,5 +46,5 @@
 <org.eventb.core.poIdentifier name="passagers'" org.eventb.core.type="ℙ(Usagers)"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPpassagersDescendanu" org.eventb.core.parentSet="/BusRodin/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTpassagersDescendanu" org.eventb.core.poStamp="0"/>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/BusRodin/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/BusRodin/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="5"/>
 </org.eventb.core.poFile>
