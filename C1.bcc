@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/BusRodin/C0.bcc|org.eventb.core.scContextFile#C0" org.eventb.core.source="/BusRodin/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scInternalContext name="C0">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="Maxi∈ℕ1" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="finite(Usagers)" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="partition(EtatEnum,{Arrivee},{Descente},{Montee},{Depart})" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#0" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="Arrivee" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#," org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.scConstant name="Depart" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#\/" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.scConstant name="Descente" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#-" org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.scCarrierSet name="EtatEnum" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.carrierSet#+" org.eventb.core.type="ℙ(EtatEnum)"/>
+<org.eventb.core.scConstant name="Maxi" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scConstant name="Montee" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#." org.eventb.core.type="EtatEnum"/>
+<org.eventb.core.scCarrierSet name="Usagers" org.eventb.core.source="/BusRodin/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="C1" org.eventb.core.label="axm1" org.eventb.core.predicate="Priorite∈Usagers → ℕ" org.eventb.core.source="/BusRodin/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="Priorite" org.eventb.core.source="/BusRodin/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.constant#(" org.eventb.core.type="ℙ(Usagers×ℤ)"/>
+</org.eventb.core.scContextFile>
