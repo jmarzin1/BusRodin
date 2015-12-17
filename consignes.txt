@@ -15,3 +15,7 @@ https://www.overleaf.com/3946042ypsmcx#/11424994/
 EVENT B
 Faire la DLF dans M0
 =>Rapport : Expliquer la garde 5 pour le M1 qui est juste une restrictio, et donc pas besoin d'invariant
+
+=> Justifier les différents bloquages possibles dans le rapport qui empêchent de faire passer la DLF. 
+ex : bus plein, personne veut descendre, trop de gens veulent monter mais peuvent pas ...
+ex : tout il est vide et personne veut prendre le bus parce que c'est pourri
