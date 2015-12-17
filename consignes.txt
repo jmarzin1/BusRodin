@@ -1,0 +1,11 @@
+Pour le 8 janvier, 23h59
+Son adresse : pierre.casteran@labri.fr
+Il faut rentre :
+-L'archive ZIP (export de Rodin)
+-Rapport en PDF
+
+Pour le rapport :
+=>Ne pas dire ce qui est évident (ouais ouais ouais)
+=>Dire a quel endroit on a tenu compte des spécs(priorités, c'est implémenté la, etc)
+=>Les difficultés : Pourquoi ? Problème d'algo ? Difficultés à prouver ? Si on est sur que c'est bon mathématiquement, on explique pourquoi on pense que c'est bon, mais moi j'ai raison. Manque d'invariant ou de théoréme ou autre, ou les prouveurs automatiques/interactifs ont des problèmes en rodins.
+=>Si on veux inclure des morceaux de Rodin : Plugin latex, qui transforme les trucs en format latex, donc ça pése.
