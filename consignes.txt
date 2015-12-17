@@ -9,3 +9,9 @@ Pour le rapport :
 =>Dire a quel endroit on a tenu compte des spécs(priorités, c'est implémenté la, etc)
 =>Les difficultés : Pourquoi ? Problème d'algo ? Difficultés à prouver ? Si on est sur que c'est bon mathématiquement, on explique pourquoi on pense que c'est bon, mais moi j'ai raison. Manque d'invariant ou de théoréme ou autre, ou les prouveurs automatiques/interactifs ont des problèmes en rodins.
 =>Si on veux inclure des morceaux de Rodin : Plugin latex, qui transforme les trucs en format latex, donc ça pése.
+
+https://www.overleaf.com/3946042ypsmcx#/11424994/
+
+EVENT B
+Faire la DLF dans M0
+=>Rapport : Expliquer la garde 5 pour le M1 qui est juste une restrictio, et donc pas besoin d'invariant
