@@ -22,9 +22,9 @@
 <org.eventb.core.psStatus name="MonteeElementaire/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="94" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="MonteeElementaire/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="94" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="MonteeElementaire/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="94" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="nouvelleAttente/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="94" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="nouvelleAttente/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="94" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="monteeTerminee/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="94" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="nouveauDescendant/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="94" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="nouveauDescendant/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="94" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="NouvelleAttente/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="NouvelleAttente/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="MonteeTerminee/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="NouveauDescendant/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="NouveauDescendant/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

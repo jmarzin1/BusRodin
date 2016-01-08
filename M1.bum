@@ -23,16 +23,16 @@
 <org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Depart">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Depart"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="nouvelleAttente">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="nouvelleAttente"/>
+<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="NouvelleAttente">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="NouvelleAttente"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="descenteTermine">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="descenteTermine"/>
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="DescenteTermine">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="DescenteTermine"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="monteeTerminee">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="monteeTerminee"/>
+<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="MonteeTerminee">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="MonteeTerminee"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="nouveauDescendant">
-<org.eventb.core.refinesEvent name="," org.eventb.core.target="nouveauDescendant"/>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="NouveauDescendant">
+<org.eventb.core.refinesEvent name="," org.eventb.core.target="NouveauDescendant"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

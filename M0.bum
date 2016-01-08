@@ -42,25 +42,25 @@
 <org.eventb.core.invariant name="9" org.eventb.core.label="inv7" org.eventb.core.predicate="finite (usagersEnAttente)"/>
 <org.eventb.core.invariant name=":" org.eventb.core.label="inv8" org.eventb.core.predicate="finite (passagers)"/>
 <org.eventb.core.invariant name=";" org.eventb.core.label="inv9" org.eventb.core.predicate="finite (passagersDescendant)"/>
-<org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="nouvelleAttente">
+<org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="NouvelleAttente">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="nouveauAttente"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="nouveauAttente ∈ Usagers"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="usagersEnAttente ≔ usagersEnAttente ∪ {nouveauAttente}" org.eventb.core.label="act1"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="{nouveauAttente} ∩ passagers = ∅ "/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="{nouveauAttente} ∩ usagersEnAttente = ∅ "/>
 </org.eventb.core.event>
-<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="descenteTermine">
+<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DescenteTermine">
 <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="Etat = Arrivee"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="passagersDescendant = ∅"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="Etat ≔ Descente" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="monteeTerminee">
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="MonteeTerminee">
 <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="Etat = Descente"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="usagersEnAttente = ∅ ∨ card(passagers) = Maxi"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="Etat ≔ Montee" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
 <org.eventb.core.invariant name="@" org.eventb.core.label="inv10" org.eventb.core.predicate="(((Etat=Depart ∧ card(passagersDescendant) &gt; 0) ∧ (card(usagersEnAttente) &gt; 0)) &#13;&#10;∨ (Etat=Arrivee ∧ (∃ descendant · descendant ∈ passagersDescendant)) &#13;&#10;∨ (Etat=Descente ∧ card(passagersDescendant) = 0 ∧ (∃ montant · montant ∈ usagersEnAttente) ∧ card(passagers)&lt;Maxi) &#13;&#10;∨ (Etat=Montee) &#13;&#10;∨ (Etat = Arrivee ∧ passagersDescendant = ∅) &#13;&#10;∨ (Etat = Descente ∧ (usagersEnAttente = ∅ ∨ card(passagers) = Maxi)))" org.eventb.core.theorem="true"/>
-<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="nouveauDescendant">
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="NouveauDescendant">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="nouveauDescendant"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="Etat = Depart ∨ Etat = Montee"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="nouveauDescendant ∈ passagers"/>

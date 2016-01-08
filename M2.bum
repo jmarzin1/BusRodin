@@ -22,7 +22,7 @@
 <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="card(passagersDescendant) = 0"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="passagers ≔ passagers ∪ {montant}" org.eventb.core.label="act2"/>
 <org.eventb.core.parameter name="+" org.eventb.core.identifier="montant"/>
-<org.eventb.core.guard name="internal1" org.eventb.core.label="grd3" org.eventb.core.predicate="montant ∈ usagersEnAttente "/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="montant ∈ usagersEnAttente "/>
 <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="card(passagers) &lt; Maxi"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="usagersEnAttente ≔ usagersEnAttente ∖ {montant}" org.eventb.core.label="act3"/>
 <org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="∀p · p ∈ usagersEnAttente ⇒ (Priorite(montant) &gt; Priorite(p)) ∨ (Priorite(montant) = Priorite(p) ∧ fileAttente(montant) &lt; fileAttente(p))"/>
@@ -31,22 +31,22 @@
 <org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Depart">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Depart"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="nouvelleAttente">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="nouvelleAttente"/>
+<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="NouvelleAttente">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="NouvelleAttente"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="fileAttente ≔ fileAttente ∪ {nouveauAttente ↦ compteur}" org.eventb.core.label="act2"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="compteur ≔ compteur + 1" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="descenteTermine">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="descenteTermine"/>
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="DescenteTermine">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="DescenteTermine"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="monteeTerminee">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="monteeTerminee"/>
+<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="MonteeTerminee">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="MonteeTerminee"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="A" org.eventb.core.identifier="fileAttente"/>
 <org.eventb.core.invariant name="B" org.eventb.core.label="inv1" org.eventb.core.predicate="fileAttente ∈ usagersEnAttente → ℕ "/>
 <org.eventb.core.variable name="C" org.eventb.core.identifier="compteur"/>
 <org.eventb.core.invariant name="D" org.eventb.core.label="inv2" org.eventb.core.predicate="compteur ∈ ℕ"/>
-<org.eventb.core.event name="E" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="nouveauDescendant">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="nouveauDescendant"/>
+<org.eventb.core.event name="E" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="NouveauDescendant">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="NouveauDescendant"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>
