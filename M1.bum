@@ -3,12 +3,12 @@
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="M0"/>
 <org.eventb.core.seesContext name="(" org.eventb.core.target="C1"/>
 <org.eventb.core.variable name="-" org.eventb.core.identifier="passagers"/>
-<org.eventb.core.variable name="." org.eventb.core.identifier="passagersEnAttente"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="usagersEnAttente"/>
 <org.eventb.core.variable name="3" org.eventb.core.identifier="Etat"/>
 <org.eventb.core.variable name="7" org.eventb.core.identifier="passagersDescendant"/>
 <org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
-<org.eventb.core.action name="'" org.eventb.core.assignment="passagers, passagersEnAttente, passagersDescendant :∣ passagers' ⊆ Usagers ∧ passagersEnAttente' ⊆ Usagers ∧ card(passagers') ≤ Maxi ∧ passagers' ∩ passagersEnAttente' = ∅ ∧ passagersDescendant' ⊆ passagers' ∧ passagersEnAttente' = ∅" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="Etat :∣ Etat' ∈ EtatEnum" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="passagers, usagersEnAttente, passagersDescendant :∣ passagers' ⊆ Usagers ∧ usagersEnAttente' ⊆ Usagers ∧ card(passagers') ≤ Maxi ∧ passagers' ∩ usagersEnAttente' = ∅ ∧ passagersDescendant' ⊆ passagers' ∧ usagersEnAttente' = ∅" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Arret">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Arret"/>
@@ -18,7 +18,7 @@
 </org.eventb.core.event>
 <org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="MonteeElementaire">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="MonteeElementaire"/>
-<org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="∀p · p ∈ passagersEnAttente ⇒ Priorite(montant) ≥ Priorite(p)"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="∀p · p ∈ usagersEnAttente ⇒ Priorite(montant) ≥ Priorite(p)"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Depart">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Depart"/>
@@ -31,5 +31,8 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="monteeTerminee">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="monteeTerminee"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="nouveauDescendant">
+<org.eventb.core.refinesEvent name="," org.eventb.core.target="nouveauDescendant"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>
